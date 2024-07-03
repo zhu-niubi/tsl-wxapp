@@ -1,0 +1,142 @@
+.page {
+    background-color: black;
+}
+.header {
+    width: 100%;
+    height: 300rpx;
+    position: relative;
+}
+
+.header .cover {
+    width: 100%;
+    height: 700rpx;
+    /* border-style: solid; */
+
+}
+
+.header .title {
+    top: 200rpx;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-size: 54rpx;
+    font-weight: bold;
+    color: #25AE9C;
+}
+
+.header .back {
+    top: 90rpx;
+    width: 70rpx;
+    height: 70rpx;
+    position: fixed;
+    z-index: 3;
+}
+
+.content {
+    margin-top: 500rpx;
+    /* padding: 0 48rpx; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content .description {
+    font-size: 28rpx;
+    margin-bottom: 60rpx;
+    text-align: center;
+    height: 100rpx;
+    width: 100%;
+  }
+
+.content .time {
+    /* border-style: solid; */
+    height: 150rpx;
+    width: 100%;
+    text-align: center;
+    font-size: 20rpx;
+    color: #c3c3c3;
+    line-height: 2.0;
+}
+
+.content .footer {
+    width: 100%;
+}
+.content .footer .factory {
+
+    width: 100%;
+    background-color: black;
+    text-align: center;
+}
+.content .footer .factory .title{
+    color: #25AE9C;
+    font-size: 55rpx;
+    font-weight: bolder;
+    font-style: italic;
+}
+.content .footer .factory .title1{
+    color: #25AE9C;
+    font-size: 30rpx;
+    font-weight: bolder;
+    font-style: italic;
+    line-height: 2.0;
+}
+.content .footer .factory .des{
+    color: #25AE9C;
+    font-size: 20rpx;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.content .footer .factory .factoryImg{
+    margin-top: 50rpx;
+    width: 100%rpx;
+    height: 100%rpx;
+}
+.content .footer .partners {
+    margin-top: 100rpx;
+    width: 100%;
+    background-size: cover;
+    text-align: center;
+    margin-bottom: 100rpx;
+}
+
+.content .footer .partners .title {
+    color: #25AE9C;
+    font-size: 30rpx;
+    font-weight: bolder;
+    font-style: italic;
+    padding: 50rpx 0 0 0;
+}
+.content .footer .partners .imageArea {
+    margin-top: 50rpx;
+    display: flex; 
+    flex-direction: row;
+}
+.content .footer .partners .item {
+    width: 100%;
+}
+.content .footer .partners .item .img {
+    width: 40%; height: 100rpx;
+}
+.content .footer .certification {
+    margin-top: 100rpx;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100rpx
+}
+.content .footer .certification .title {
+    color: #25AE9C;
+    font-size: 30rpx;
+    font-weight: bolder;
+    font-style: italic;
+}
+.content .footer .certification .des {
+    color: #fff;
+    font-size: 20rpx;
+    font-weight: bolder;
+    font-style: italic;
+}
+.content .footer .certification .certImg {
+    width: 140%;
+    height: 350rpx;
+}
+

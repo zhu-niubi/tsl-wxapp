@@ -1,0 +1,71 @@
+<view class="page">
+  <view wx:if="{{product.name}}" >
+    <view class="header">
+      <image class="back" src="../../images/icon/step_back_blue.svg" bindtap="goBack"></image>
+      <image class="cover" src="{{product.image[1][0] === '/' ? 'https://www.isfppf.com' + product.image[1] : product.image[1]}}" mode="widthFix"></image>
+      <view class="title">{{product.name}}</view>
+     
+    </view>
+    <view class="content">
+        <rich-text class="description" nodes="{{product.descriptions}}"></rich-text>
+        <!-- <scroll-view class="product-lines" scroll-x="{{true}}"  show-scrollbar="{{false}}" style="width: 100%;height: 200rpx;" >
+          <view style="{{ 'width:'+(productLines.length * 400)+'rpx' }}">
+            <view class="product-box" wx:for="{{productLines}}" wx:key="index">
+              <view class="name">{{item.name}}</view>
+            </view>
+          </view>
+        </scroll-view> -->
+        <view class="time">
+        创建时间：{{product.createdAt}}
+        更新时间：{{product.updatedAt}}
+        </view> 
+        <view class="footer">
+      <view class="factory">
+        <view class="title">
+          TPU PPF
+        </view>
+        <view class="title1">
+          {{footerConfig.industry.subtitle}}
+        </view>
+        <view class="des" wx:for="{{footerConfig.industry.content}}" wx:key="index">
+          {{item.name}}
+          <view style="color: #fff; font-size: 20rpx; line-height: 2.0;">
+            {{item.describe}}
+          </view>
+        </view>
+
+        <image class="factoryImg" src="{{footerConfig.industry.bgImg[0] == '/' ? 'https://www.isfppf.com' + footerConfig.industry.bgImg : footerConfig.industry.bgImg}}">
+        </image>
+
+      </view>
+      <view class="partners" style="background-image: url('{{footerConfig.partners.bgImg[0] === '/' ? 'https://www.isfppf.com' + footerConfig.partners.bgImg : footerConfig.partners.bgImg}}')">
+        <view class="title">
+          {{footerConfig.partners.title}}
+        </view>
+        <view class="imageArea">
+          <view class="item">
+            <image class="img" src="{{item[0] === '/' ? 'https://www.isfppf.com' + item : item}}" wx:for="{{footerConfig.partners.partnerArray}}" wx:key="index"></image>
+          </view>
+        </view>
+      </view>
+      <view class="certification">
+        <view class="title">
+          {{footerConfig.certification.title}}
+        </view>
+        <view class="des">
+          {{footerConfig.certification.subtitle}}
+        </view>
+        <image class="certImg" src="{{footerConfig.certification.bgImg[0] == '/' ? 'https://www.isfppf.com' + footerConfig.certification.bgImg : footerConfig.certification.bgImg}}"></image>
+      </view>
+
+
+    </view>
+      </view>
+    
+  </view>
+  <view wx:else="{{product.name == ''}}">
+    <view class="no">
+      抱歉，该产品数据暂无~~~
+    </view>
+  </view>
+</view>

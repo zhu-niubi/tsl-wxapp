@@ -1,0 +1,117 @@
+<!--index.wxml-->
+<view class="page">
+  <!-- 首页slide图 -->
+  <view class="swiper">
+    <swiper class="swiper" circular="{{ true }}" data-e="{{ e }}" bindchange="changeCurrent" indicator-dots="{{ false }}">
+      <view wx:for="{{ info }}" wx:key="index">
+        <swiper-item>
+          <image class="swiperImg" wx:if="{{ item.type === 'img'}}" src="{{ item.img }}" mode="aspectFill"  data-product-id="{{item.productId}}"></image>
+          <video class="swiperVideo" wx:if="{{ item.type === 'video' }}" src="{{ item.img }}" autoplay="{{ true }}" loop="{{ true }}" muted="{{ true }}" controls="{{false}}" object-fit="cover">
+          </video>
+        </swiper-item>
+      </view>
+    </swiper>
+    <view class="swiper-float-content">
+      <view wx:if="{{ currentSwiperIndex === index }}" wx:for="{{ info }}" wx:key="index" class="title">
+        <view wx:if="{{ item.type === 'img' }}" style="margin-top: 197rpx;">
+          {{item.title}}
+        </view>
+        <view wx:else="{{ item.type === 'video' }}">
+          <image class="titleImg" src="/images/icon/1660640454678.svg"></image>
+        </view>
+      </view>
+      <view class="description-area">
+        <view class="description">
+          <view class="description-title1">
+            {{SlideConfig.title}}
+          </view>
+          <view class="description-title2">
+            {{SlideConfig.title1}}
+          </view>
+          <view class="description-title3">
+            {{SlideConfig.descript}}
+          </view>
+          <view class="description-title1">
+            {{SlideConfig.descript1}}
+          </view>
+          <view class="description-title1">
+            {{SlideConfig.descript2}}
+          </view>
+        </view>
+      </view>
+      <view class="swiper-dots">
+        <view class="dot {{ currentSwiperIndex !== index || 'active' }}" wx:for="{{info}}" wx:key="index"></view>
+      </view>
+
+
+    </view>
+  </view>
+  <!-- 产品 -->
+  <view class="product">
+    <view class="title">
+      ISF PRODUCT
+    </view>
+    <view class="desc">
+      品质，别无二致
+      服务，细致入微
+    </view>
+    <swiper class="product_swiper" indicator-dots="{{ false }}" easing-function="easeInOutCubic" previous-margin="100rpx" next-margin="120rpx"  circular>
+      <view wx:for="{{productList}}" wx:key="index">
+        <swiper-item class="swiper-item" bindtap="goProductTypeDetail" data-id = "{{item._id}}">
+          <image class="cover" src="{{item.image[2][0] === '/' ? 'https://www.isfppf.com' + item.image[2] : item.image[2]}}" mode="aspectFill"></image>
+          <view class="name">{{item.name}}</view>
+        </swiper-item>
+      </view>
+    </swiper>
+    <button class="btn" bindtap="goAllProduct">查看所有产品</button>
+  </view>
+
+  <!-- 杂志 -->
+  <swiper wx:if="{{ magazineList.length > 0 }}" class="magazine" indicator-dots="{{ false }}" easing-function="easeInOutCubic" previous-margin="100rpx" next-margin="120rpx">
+    <view wx:for="{{ magazineList }}" wx:key="index">
+      <swiper-item class="swiper-item">
+        <view class="title">
+          ISF-ZONE
+        </view>
+        <!-- <image class="cover" mode="aspectFill" bindtap="gotoMagazineDetail" src="{{item.cover}}" data-item="{{item}}"></image> -->
+        <image class="cover" mode="aspectFill" src="{{item.cover}}" data-item="{{item}}"></image>
+        <view class="name">
+          {{item.title}}
+        </view>
+      </swiper-item>
+    </view>
+  </swiper>
+  <view class="nomagazine" wx:else="{{ magazineList.length == 0 }}">
+    本月杂志暂无...
+  </view>
+
+  <!-- 视频 -->
+  <view class="icon-banner" bindtap="gotoVideo">
+    <view class="banner-bg"></view>
+    <view class="content">
+      <view class="title">
+        ISF视频集锦
+      </view>
+      <view class="subtitle">
+        观看视频
+      </view>
+    </view>
+  </view>
+
+  <!-- <view class="icon-box-area">
+    <view class="icon-box">
+      <image class="icon" src="../../images/ic_clean_engry_policy.svg" mode="widthFix"></image>
+      <view class="title">保护膜政策</view>
+    </view>
+    <view class="icon-box">
+      <image class="icon jisuan" src="../../images/jisuanqi.svg"></image>
+      <view class="title">购膜计算器</view>
+    </view>
+    <view class="icon-box">
+      <image class="icon circle" src="../../images/ic_traidin.svg" mode="widthFix"></image>
+      <view class="title">车膜质保</view>
+    </view>
+
+  </view> -->
+
+</view>

@@ -1,0 +1,52 @@
+<!--pages/product/index.wxml-->
+<view class="page">
+  <view wx:if="{{product.cover}}">
+    <view class="header">
+      <image class="back" src="../../images/icon/step_back_blue.svg" bindtap="goBack"></image>
+      <image class="cover" src="{{product.cover}}" mode="aspectFill"></image>
+      <!-- <view class="title">{{product.title}}</view> -->
+    </view>
+    <view class="content">
+      <rich-text class="description" nodes="{{product.description}}"></rich-text>
+      <!-- <scroll-view class="product-lines" scroll-y="true" style="width: 100%;height: 1000rpx;">
+        <view style="{{ 'height:'+(productLines.length * 400)+'rpx' }}">
+          <view class="product-box" wx:for="{{productLines}}" wx:key="index">
+            <view class="name">{{item.name}}</view>
+            <view class="config">
+              <view class="label">产品类型</view>
+              <view class="value">{{item.typeName}}</view>
+            </view>
+           
+          </view>
+        </view>
+      </scroll-view> -->
+      <!-- <view class="productlist" wx:for="{{productLines}}" wx:key="index">
+        <view class="name">
+          {{item.name}}
+        </view>
+        <view class="producttype">
+          产品类型：{{item.typeName}}
+        </view>
+        <image class="cover" src="{{item.cover}}">
+          {{item.cover}}
+        </image>
+      </view> -->
+      <view class="Tree" wx:for="{{productTree}}"  wx:key="index">
+        <view class="indexname">
+          {{index}}
+        </view>
+        <view class="content-list" wx:for="{{item}}" wx:for-item="product" wx:key="idnex" >
+          <view class="pro" bindtap="goProdetail" data-id="{{product.id}}">
+            {{product.name}}
+          </view>
+        </view>
+      </view>
+      
+    </view>
+  </view>
+  <view wx:else="{{product.cover == ''}}">
+    <view class="no">
+      抱歉，该产品数据暂无~~~
+    </view>
+  </view>
+</view>

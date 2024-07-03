@@ -1,0 +1,142 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back {
+  top: 90rpx;
+  width: 70rpx;
+  height: 70rpx;
+  position: fixed;
+  z-index: 3;
+}
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 38rpx;
+  height: 138rpx;
+  width: 100%;
+}
+.description .title {
+  font-weight: bold;
+  margin-bottom: 50rpx;
+}
+.main {
+  margin-top: 220rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 740rpx;
+
+}
+
+.main .page_first, .main .page_last {
+  width: 90%;
+  height: 1100rpx;
+  background-color: white;
+}
+
+.main .page_first {
+  height: 480rpx;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.page_last {
+  position: relative;
+  width: 50%;
+}
+
+.photo_item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+image {
+  border-radius: 30rpx;
+  width: 100%;
+  height: 100%;
+}
+
+.left, .right {
+  transform-style: preserve-3d;
+  perspective: 1000;
+  transition: all 1s ease-in-out;
+}
+
+.left {
+  transform-origin: 0% 50%;
+  transform: perspective(1000px) rotateY(-180deg);
+}
+
+.right {
+  transform-origin: 0% 50%;
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.zindex1 {
+  z-index: 1;
+}
+
+.zindex2 {
+  z-index: 2;
+}
+
+.zindex3 {
+  z-index: 3;
+}
+
+.zindex4 {
+  z-index: 4;
+}
+
+
+.foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 38rpx;
+  height: 138rpx;
+  width: 100%;
+}
+.foot image {
+  height: 38rpx;
+  border: none;
+}
+
+
+
+/* 
+.plate{
+  width: 200px;
+  height: 200px;
+  border: 1px solid blue;
+  position: relative;
+}
+.plate-box{
+  width: 0;
+  height: 0;
+  border-left: 100px solid #ccc;
+  border-right: 100px solid transparent;
+  border-top: 57px solid transparent;
+  border-bottom: 57px solid transparent;
+  position: absolute;
+  left: 43px;
+  top: 0;
+}
+.plate-box:nth-child(1){
+  transform: rotate(0)
+}
+.plate-box:nth-child(2){
+  transform: rotate(120deg)
+}
+.plate-box:nth-child(3){
+  transform: rotate(240deg)
+} */

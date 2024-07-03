@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/map/index",
+    "pages/activity/index",
+    "pages/product/index",
+    "pages/magazine/index",
+    "pages/video/index",
+    "pages/productDetail/index"
+
+  ],
+
+  "subPackages": [{
+    "root": "page3",
+    "pages": [
+      "products/index"
+    ]
+  }],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "ISF",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {
+    "van-transition": "@vant/weapp/transition/index",
+    "van-overlay": "@vant/weapp/overlay/index",
+    "van-loading": "@vant/weapp/loading/index",
+    "van-steps": "@vant/weapp/steps/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-tree-select": "@vant/weapp/tree-select/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-goods-action": "@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/goods-action-button/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-index-bar": "@vant/weapp/index-bar/index",
+    "van-index-anchor": "@vant/weapp/index-anchor/index",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-count-down": "@vant/weapp/count-down/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-collapse": "@vant/weapp/collapse/index",
+    "van-collapse-item": "@vant/weapp/collapse-item/index",
+    "van-sidebar": "@vant/weapp/sidebar/index",
+    "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+    "van-skeleton": "@vant/weapp/skeleton/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-progress": "@vant/weapp/progress/index",
+    "van-circle": "@vant/weapp/circle/index",
+    "van-uploader": "@vant/weapp/uploader/index"
+  }
+}

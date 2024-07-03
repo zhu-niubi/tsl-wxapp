@@ -1,0 +1,18 @@
+<!-- <view class="page">
+  <view class="description">
+    <view class="title"> {{des}} </view>
+  </view>
+  <view class='page_last'>
+    <view class='photo_item {{item.isturn? "left":"right" }} {{"zindex" + item.zIndex}}' bindtap='setclass' data-index="{{index}}" wx:for="{{imageData}}" bindtransitionend='end' wx:key="index">
+      <image src='{{item.src}}' mode='aspectFill'></image>
+    </view>
+  </view>
+</view>
+</view> -->
+<web-view src="{{webUrl}}"></web-view>
+<!-- <image class="back" src="../../images/icon/step_back_blue.svg" bindtap="goBack"></image> -->
+
+<!-- <web-view src="http://192.168.1.115:3003/magazine"></web-view> -->
+
+
+

@@ -1,0 +1,121 @@
+/* pages/product/index.wxss */
+.page {
+  background-color: #000;
+}
+.header {
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+}
+
+.header .cover {
+  width: 100%;
+  height: 100%;
+}
+.header .title {
+  top: 200rpx;
+  position:absolute;
+  text-align: center;
+  width: 100%;
+  font-size: 54rpx;
+  font-weight: bold;
+  color: white;
+}
+.header .back {
+  top: 90rpx;
+  width: 70rpx;
+  height: 70rpx;
+  position: fixed;
+  z-index: 3;
+}
+.content {
+  padding: 8% 0;
+  
+}
+.content .description {
+  text-align: center;
+  font-size: 28rpx;
+  color: #D3D3D3;
+}
+.content .productlist {
+  margin-top: 50rpx;
+  width: 100%;
+  height: 700rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content .Tree {
+  /* border-style: solid; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content .Tree .indexname {
+  margin-top: 50rpx;
+  text-align: center;
+  width: 100%;
+  height: 70rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #D3D3D3;
+}
+
+.content .Tree  .pro {
+  width: 100%;
+  line-height: 3;
+  font-size: 28rpx;
+  color: #c3c3c3;
+  /* font-weight: bold; */
+}
+
+.content .productlist .producttype {
+  text-align: center;
+  width: 100%;
+  height: 70rpx;
+  font-size: 24rpx;
+  color: #c3c3c3;
+}
+
+.content .productlist .cover {
+  width: 100%;
+  height: 600rpx;
+  
+}
+
+.product-box {
+  margin-top: 112rpx;
+  width: 660rpx;
+  height: 800rpx;
+  float: left;
+  text-align: center;
+}
+
+.product-box .name {
+  font-size: 28rpx;
+  line-height: 50rpx;
+  
+  height: 80rpx;
+  overflow: hidden;
+  font-weight: bold;
+  border-bottom: 2rpx solid #c3c3c3;
+}
+
+.product-box .config {
+  margin-top: 44rpx;
+}
+.product-box .config .label{
+  font-size: 24rpx;
+  color: #c3c3c3;
+  margin-bottom: 33rpx;
+}
+.product-box .config .value{
+  font-size: 28rpx;
+}
+.no {
+  font-size: 25rpx;
+  text-align: center;
+  margin-top: 30rpx;
+}

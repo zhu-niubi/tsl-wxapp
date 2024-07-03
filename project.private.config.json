@@ -1,0 +1,43 @@
+{
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "projectname": "isf_wxapp",
+  "setting": {
+    "compileHotReLoad": true,
+    "urlCheck": false
+  },
+  "libVersion": "2.33.0",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "月刊详情",
+          "pathName": "pages/magazine/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "视频指南",
+          "pathName": "pages/video/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "杂志详情页面",
+          "pathName": "pages/magazine/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "产品列表",
+          "pathName": "pages/product/index",
+          "query": "id=1",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

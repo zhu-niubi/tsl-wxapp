@@ -1,0 +1,26 @@
+<view class="page">
+  <view class="header">
+      <image class="back" src="../../images/icon/step_back_blue.svg" bindtap="goBack"></image>
+      <image class="cover" src="http://isf-ppf.oss-cn-shanghai.aliyuncs.com/wxapp/contactisf.jpg" mode="aspectFill"></image>
+      <!-- <view class="title">{{product.title}}</view> -->
+    </view>
+  <view class="content">
+    <van-grid column-num="2" gutter="{{ 10 }}" border='{{false}}' center="{{true}}" >
+      <van-grid-item content-class="card-home" use-slot wx:for="{{ liveList }}" wx:key="index" >
+        <image class="img" src="{{item.cover}}" bindtap="gotoTv" data-id="{{index}}" mode="aspectFill"><van-icon name="play-circle-o" class="icon_p"/></image>        
+        <view class="title">
+          {{item.title}}
+        </view>
+      </van-grid-item>  
+    </van-grid>
+    <image wx:if="{{videoLink}}" class="back1" src="../../images/icon/step_back_blue.svg" bindtap="stopVideo"></image>
+    <video 
+      wx:if="{{videoLink}}"  
+      src="{{videoLink}}" 
+      show-fullscreen-btn="{{true}}" 	
+      show-center-play-btn="{{false}}"
+      id="videoId"
+      class='videoCenter'
+     ></video>
+  </view>
+</view>
